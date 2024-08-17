@@ -7,17 +7,17 @@ export class UserService {
     { id: 2, name: 'Raja', email: 'Raja@gmail.com', role: 'ADMIN' },
     { id: 3, name: 'Xebia', email: 'xebia@xebia.com', role: 'SUPERADMIN' },
     { id: 4, name: 'Ani', email: 'ani@gmail.com', role: 'INTERN' },
-];
+  ];
   findAllUsers(role?) {
-    return (role) ? this.USERS.filter((item)=> item.role == role) : this.USERS;
+    return role ? this.USERS.filter((item) => item.role == role) : this.USERS;
   }
 
   findUser(id) {
-    return (id) ? this.USERS.find((item)=> item.id == id) : [];
+    return id ? this.USERS.find((item) => item.id == id) : [];
   }
 
-  createUser(data){
+  createUser(data) {
     this.USERS.push(data);
-    return {message:'User created ', ...data};
+    return { message: 'User created ', ...data };
   }
 }
