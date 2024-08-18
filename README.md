@@ -17,5 +17,7 @@ nest g module database
 nest g service database
 nest g resource employe
 
+npm i --save @nestjs/throttler
+
 npm run format
 ```
